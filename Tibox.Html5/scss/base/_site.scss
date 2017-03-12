@@ -1,0 +1,42 @@
+﻿body {
+//PRIMERO SE DEBE PENSAR EN MOBILE:
+    background-color: $background-color;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+//LUEGO INCLUIR EL CÓDIGO PARA ESCRITORIO:
+    @include break-point(md) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+//ES MUCHO MÁS FÁCIL IR DESDE MOBILE A ESCRITORIO QUE AL REVÉS.
+
+    header {
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+		border-with :0 0 1px;
+        background-color: $site-color-black;
+        height: 4rem;
+
+    }
+
+    footer{
+       background-color:  $site-color-black;
+       color: $site-color-white;
+       height: 2rem;
+       position: fixed;
+       right: 0;
+       left: 0;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    section{
+        padding-top: 5rem;
+		margin-bottom: 4rem;
+    }
+
+}
